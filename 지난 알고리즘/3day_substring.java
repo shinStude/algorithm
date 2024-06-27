@@ -1,36 +1,36 @@
-/*
- * 설명 : 한 개의 문장이 주어지면 그 문장 속에서 가장 긴 단어를 출력하는 프로그램을 작성하세요. 문장속의 각 단어는 공백으로 구분됩니다.
- * 입력 : 첫 줄에 길이가 100을 넘지 않는 한 개의 문장이 주어집니다. 문장은 영어 알파벳으로만 구성되어 있습니다.
- * 출력 : 첫 줄에 가장 긴 단어를 출력한다. 가장 길이가 긴 단어가 여러개일 경우 문장속에서 가장 앞쪽에 위치한 단어를 답으로 합니다.
- */
+// /*
+//  * 설명 : 한 개의 문장이 주어지면 그 문장 속에서 가장 긴 단어를 출력하는 프로그램을 작성하세요. 문장속의 각 단어는 공백으로 구분됩니다.
+//  * 입력 : 첫 줄에 길이가 100을 넘지 않는 한 개의 문장이 주어집니다. 문장은 영어 알파벳으로만 구성되어 있습니다.
+//  * 출력 : 첫 줄에 가장 긴 단어를 출력한다. 가장 길이가 긴 단어가 여러개일 경우 문장속에서 가장 앞쪽에 위치한 단어를 답으로 합니다.
+//  */
 
- import java.util.*;
+//  import java.util.*;
  
- class Main { 
-    public String solution(String str){
-        String answer = "";
-        int m = Integer.MIN_VALUE, pos;
-        while ((pos=str.indexOf(' '))!=-1) {
-            String tmp=str.substring(0, pos);
-            int len=tmp.length();
-            if (len>m) {
-                m=len;
-                answer=tmp;
-            }
-            str.substring(pos +1);
-        }
-        if (str.length()>m) answer=str; {
+//  class Main { 
+//     public String solution(String str){
+//         String answer = "";
+//         int m = Integer.MIN_VALUE, pos;
+//         while ((pos=str.indexOf(' '))!=-1) {
+//             String tmp=str.substring(0, pos);
+//             int len=tmp.length();
+//             if (len>m) {
+//                 m=len;
+//                 answer=tmp;
+//             }
+//             str.substring(pos +1);
+//         }
+//         if (str.length()>m) answer=str; {
             
-        }
+//         }
        
 
-        return answer;
-    }
+//         return answer;
+//     }
 
-    public static void main(String[] args){
-        Main T = new Main();
-        Scanner kb = new Scanner(System.in);
-        String str = kb.nextLine(); // 한줄을 입력 받음 
-        System.out.print(T.solution(str)); // 받아서 문장을 솔루션에 전달
-    }
- }
+//     public static void main(String[] args){
+//         Main T = new Main();
+//         Scanner kb = new Scanner(System.in);
+//         String str = kb.nextLine(); // 한줄을 입력 받음 
+//         System.out.print(T.solution(str)); // 받아서 문장을 솔루션에 전달
+//     }
+//  }
