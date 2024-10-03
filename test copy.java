@@ -1,31 +1,24 @@
-/*1. 특정 문자 뒤집기
-    설명 : 영어 알파벳과 특수문자로 구성된 문자열이 주어지면 영어 알파벳만 뒤집고, 특수문자는 자기 자리에 그대로 있는 문자열을 만들어
-    출력하는 프로그램을 작성하세요.
+/*1. 중복 문자 뒤집기   
+    설명 : 소문자로 된 한 개의 문자열이 입력되면 중복된 문자열을 제거하고 출력하는 프로그램을 작성하시오.
+          중복이 제거된 문자열의 각 문자는 원래 문자열의 순서를 유지합니다. 
     
-    입력 : 첫 줄에 길이가 100을 넘지 않는 문자열이 주어집니다. 
-    출력 : 첫 줄에 알파벳만 뒤집힌 문자열을 출력합니다. 
+    입력 : 첫 줄에 문자열이 입력됩니다. 문자열의 길이는 100을 넘지 않습니다. 
+    출력 : 첫 줄에 중복문자가 제거된 문자열을 출력합니다.
+
      */
 
      import java.util.*;
      
      class Main {
         public String solution(String str){
-            String answer;
-            char[] s=str.toCharArray();
-            int lt =0, rt=str.length()-1; 
-            while (lt<rt) {
-                if(!Character.isAlphabetic(s[lt])) lt++;
-                else if(!Character.isAlphabetic(s[rt])) rt--;
-                else {
-                    char tmp=s[lt];
-                    s[lt]=s[rt];
-                    s[rt] = tmp;
-                    lt ++;
-                    rt --;
-                }  // s의 lt값이 알파벳이 아니면 참
-                
+            String answer="";
+            for(int i=0; i<str.length(); i++){
+                // System.out.println(str.charAt(i)+ "  " +i+ "  "+str.indexOf(str.charAt(i)));
+                if(str.indexOf(str.charAt(i))==i) 
+                answer+=str.charAt(i); //indexof는 최초로 발생한 부분의 위치값
+
+
             }
-            answer=String.valueOf(s);
             return answer;
         }
 
